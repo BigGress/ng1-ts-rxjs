@@ -1,0 +1,17 @@
+$nw:200px;//nav-width
+$nsw:82px;//nav-small-width
+$nh:80px;//这是设计图导航的高度nav-height
+$nsh:80px;//这是我自己找到的高度nav-small-height
+
+$bc: rgb(71,178,234);//base-color
+$border-color: rgb(222,222,222);
+
+$px18: 18px;// base-size
+
+@mixin transition($ts: all .5s){
+  -webkit-transition: $ts;
+  -moz-transition: $ts ;
+  -ms-transition: $ts ;
+  -o-transition: $ts ;
+  transition: $ts ;
+}
