@@ -1,8 +1,0 @@
-{
-  "resolution": "main",
-  "tree": {
-    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/es6-shim/es6-shim.d.ts",
-    "raw": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts",
-    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/es6-shim/es6-shim.d.ts"
-  }
-}
