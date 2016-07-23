@@ -10,6 +10,8 @@ config.output = {
 };
 
 config.plugins = config.plugins.concat([
+  new webpack.NoErrorsPlugin(),
+  new webpack.optimize.DedupePlugin(),
 
   // Reduces bundles total size
   new webpack.optimize.UglifyJsPlugin({
