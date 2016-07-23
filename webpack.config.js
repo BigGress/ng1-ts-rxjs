@@ -10,6 +10,10 @@ module.exports = {
     "vendor":"./client/app/vendor.browser.ts"
   },
 
+  resolve:{
+    extensions:["",".js",".ts",".scss",".css",".html"]
+  },
+
   module: {
     loaders: [
        { test: /\.ts/, exclude:[/node_modules/], loader:'ng-annotate!ts'},
