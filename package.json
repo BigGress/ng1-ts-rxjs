@@ -5,6 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.0",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.0-rc.5",
+    "angular-messages": "^1.5.8",
     "angular-ui-router": "^0.2.15",
     "autoprefixer": "^6.3.6",
     "awesome-typescript-loader": "^2.1.1",
