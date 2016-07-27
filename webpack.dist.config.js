@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path    = require('path');
 var config  = require('./webpack.config');
 var CopyWebpackPlugin = require("copy-webpack-plugin");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 config.output = {
   filename: '[name].bundle.js',
@@ -9,22 +10,21 @@ config.output = {
   path: path.resolve(__dirname, 'dist')
 };
 
+config.module.loaders.find(el=>el.loader==="style!css?sourceMap!postcss!sass")
+.loader = ExtractTextPlugin.extract('style', 'css!postcss!sass?sourceMap')
+
 config.plugins = config.plugins.concat([
-  new webpack.NoErrorsPlugin(),
-  new webpack.optimize.DedupePlugin(),
 
   // Reduces bundles total size
   new webpack.optimize.UglifyJsPlugin({
     mangle: {
-
-      // You can specify all variables that should not be mangled.
-      // For example if your vendor dependency doesn't use modules
-      // and relies on global variables. Most of angular modules relies on
-      // angular global variable, so we should keep it unchanged
       except: ['$super', '$', 'exports', 'require', 'angular']
     }
   }),
-
+  //单独打包css
+  new ExtractTextPlugin("styles.css"),
+  //单独打包css
+  // new ExtractTextPlugin("styles.css"),
   new CopyWebpackPlugin([{
     from:"client/assets",
     to:"assets"
