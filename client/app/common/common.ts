@@ -3,5 +3,5 @@ import * as angular from 'angular';
 
 export let commonModule = angular.module('app.common', [
 
-]); 
+]);
 

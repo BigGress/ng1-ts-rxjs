@@ -322,6 +322,13 @@ interface JQueryPromise<T> extends JQueryGenericPromise<T> {
 
     // Deprecated - given no typings
     pipe(doneFilter?: (x: any) => any, failFilter?: (x: any) => any, progressFilter?: (x: any) => any): JQueryPromise<any>;
+    
+    /**
+     * Return a Deferred's Promise object.
+     * 
+     * @param target Object onto which the promise methods have to be attached
+     */
+    promise(target?: any): JQueryPromise<T>;
 }
 
 /**
@@ -2758,8 +2765,9 @@ interface JQuery {
 
     /**
      * Retrieve all the elements contained in the jQuery set, as an array.
+     * @name toArray
      */
-    toArray(): any[];
+    toArray(): HTMLElement[];
 
     /**
      * Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place.
@@ -2815,8 +2823,9 @@ interface JQuery {
     get(index: number): HTMLElement;
     /**
      * Retrieve the elements matched by the jQuery object.
+     * @alias toArray
      */
-    get(): any[];
+    get(): HTMLElement[];
 
     /**
      * Search for a given element from among the matched elements.

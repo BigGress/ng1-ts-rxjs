@@ -1,4 +1,3 @@
-///<reference path="../../../../typings/index.d.ts"/>
 import controller from './home.controller.ts';
 
 let homeComponent = {

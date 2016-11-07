@@ -1,17 +1,20 @@
 ///<reference path="../../typings/index.d.ts"/>
+
 import * as angular from "angular";
 import {commonModule} from "./common/common.ts";
-import {componentModule} from "./components/components.ts";
+import { aboutModule } from "./about/about";
+import { homeModule } from "./home/home";
 import AppComponent from "./app.component.ts";
 import topController from "./app.controller.ts";
 import "normalize.css";
 
 
 angular.module("app", [
+    "ngAnimate",
     "ui.router",
     commonModule.name,
-    componentModule.name,
-    "ngAnimate"
+    aboutModule.name,
+    homeModule.name,
   ])
   .config(($locationProvider:any) => {
     "ngInject";

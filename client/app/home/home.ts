@@ -1,11 +1,11 @@
 import * as angular from 'angular';
 import homeComponent from './home.component.ts';
 
-let homeModule = angular.module('home', [
+export let homeModule = angular.module('home', [
   'ui.router'
 ])
 
-.config(($stateProvider:any, $urlRouterProvider:any) => {
+homeModule.config(($stateProvider:any, $urlRouterProvider:any) => {
   "ngInject";
 
   $urlRouterProvider.otherwise('/');
@@ -18,5 +18,3 @@ let homeModule = angular.module('home', [
 })
 
 .component('home', homeComponent);
-
-export default homeModule;

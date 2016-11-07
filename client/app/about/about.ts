@@ -1,12 +1,11 @@
-
 import * as angular from 'angular';
 import aboutComponent from './about.component.ts';
 
-let aboutModule = angular.module('about', [
+export let aboutModule = angular.module('about', [
   'ui.router'
 ])
 
-.config(($stateProvider:any) => {
+aboutModule.config(($stateProvider:any) => {
   "ngInject";
   $stateProvider
     .state('about', {
@@ -16,5 +15,3 @@ let aboutModule = angular.module('about', [
 })
 
 .component('about', aboutComponent);
-
-export default aboutModule;

@@ -5,12 +5,16 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "noEmitHelpers": true
+    "noEmitHelpers": false
   },
   "filesGlob": [
     "./client/**/*.ts",
     "!./node_modules/**/*.ts",
     "src/custom-typings.d.ts",
-    "typings/browser.d.ts"
+    "typings/index.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "bower_components"
   ]
 }
