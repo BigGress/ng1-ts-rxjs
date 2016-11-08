@@ -15,7 +15,6 @@ config.module.loaders.find(el=>el.loader==="style!css?sourceMap!postcss!sass")
 
 config.plugins = config.plugins.concat([
 
-  // Reduces bundles total size
   new webpack.optimize.UglifyJsPlugin({
     mangle: {
       except: ['$super', '$', 'exports', 'require', 'angular']
