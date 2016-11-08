@@ -8,8 +8,8 @@ var imageInliner = require('postcss-image-inliner');
 const config = require("./config/config.js");
 
 var opts = {
-    assetPaths: [], // List of directories where the inliner should look for assets
-    maxFileSize: 10240 // Sets a max file size (in bytes)
+    assetPaths: [], 
+    maxFileSize: 10240 
 }
 
 module.exports = {
